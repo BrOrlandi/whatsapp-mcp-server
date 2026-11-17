@@ -67,7 +67,7 @@ experiência da AWS", com login pelo Google, GitHub ou Apple e com "projetos":
 6. Clique em **Connect using SSH**. Abre um terminal no navegador. Cole:
 
    ```sh
-   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash
+   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash
    ```
 
 7. No fim, o instalador imprime o link `https://…sslip.io/setup?token=…`.
@@ -135,7 +135,7 @@ chmod 600 lightsail.pem
 IP=$(aws lightsail get-static-ip --static-ip-name "$NAME-ip" --query staticIp.ipAddress --output text)
 
 ssh -i lightsail.pem -o StrictHostKeyChecking=accept-new ubuntu@"$IP" \
-  'curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash'
+  'curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash'
 ```
 
 A última tela do instalador traz o link `/setup?token=…`. O agente entrega esse

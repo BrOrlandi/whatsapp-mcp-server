@@ -48,6 +48,7 @@ const pageSource = `
 <a href="/ajuda"{{if eq .Active "ajuda"}} aria-current="page"{{end}}>{{icon "help"}}<span>Ajuda</span></a>
 </nav>
 {{template "updatebanner" .}}
+{{template "deprecated"}}
 {{with .Error}}<p class="alert" role="alert">{{.}}</p>{{end}}
 {{end}}
 
@@ -700,6 +701,13 @@ steps for that one, which end when it connects. No tabs on the way. */}}
 </div></section>
 {{template "foot"}}{{end}}
 
+
+{{/* The server version is being retired in favour of WhatsApp MCP Local,
+which also runs on a Linux server. The notice stays on every signed-in page. */}}
+{{define "deprecated"}}<div class="update">
+<p class="update__line">A versão servidor do WhatsApp MCP vai ser descontinuada.</p>
+<p class="update__note">Ela continua funcionando, mas não vai receber novidades. A versão Local também roda num servidor Linux e é a que segue sendo mantida. <a class="update__notes" href="https://github.com/BrOrlandi/whatsapp-mcp-server/blob/main/docs/migrar-para-local.md" rel="noopener noreferrer" target="_blank">Como migrar</a></p>
+</div>{{end}}
 
 {{define "updatebanner"}}{{$page := .}}{{with rolledBackFrom}}
 <div class="update update--rollback" role="alert">

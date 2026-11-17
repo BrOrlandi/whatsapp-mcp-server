@@ -6,7 +6,7 @@ Everything runs from one Compose file. A host with Docker Engine and Compose v2,
 ## 1. Configure
 
 ```sh
-git clone https://github.com/BrOrlandi/whatsapp-mcp.git
+git clone https://github.com/BrOrlandi/whatsapp-mcp-server.git
 cd whatsapp-mcp
 cp .env.example .env
 ```
@@ -204,7 +204,7 @@ route around it.
 On an installation made by `install.sh`, one command:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
 ```
 
 It moves the checkout to the newest release and pulls the images for it, having

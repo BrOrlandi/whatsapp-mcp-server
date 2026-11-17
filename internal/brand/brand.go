@@ -55,7 +55,7 @@ const (
 	// AuthorURL is where clicking the name goes.
 	AuthorURL = "https://github.com/BrOrlandi"
 	// RepositoryURL is the source, which the licence expects to stay reachable.
-	RepositoryURL = "https://github.com/BrOrlandi/whatsapp-mcp"
+	RepositoryURL = "https://github.com/BrOrlandi/whatsapp-mcp-server"
 	// SupportURL takes a voluntary payment of any amount, suggested at ten
 	// dollars. Empty hides the button entirely rather than linking somewhere
 	// broken, which is what it was until there was a link to point at.

@@ -21,6 +21,12 @@
 
 ---
 
+> [!WARNING]
+> **The server version is being retired.** It keeps working, but gets no new
+> features. [WhatsApp MCP Local](https://github.com/BrOrlandi/whatsapp-mcp-local)
+> also runs on a Linux server and is the version that stays maintained. See
+> [how to migrate](docs/migrating-to-local.md).
+
 > **For most people,
 > [WhatsApp MCP Local](https://github.com/BrOrlandi/whatsapp-mcp-local) is the
 > simpler choice.** It is an app for macOS, Windows and Linux that runs on your
@@ -99,7 +105,7 @@ The provider gives you an IP address and a way to open a terminal on the machine
 there:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash
 ```
 
 It does the rest by itself: installs Docker, generates every secret, derives an
@@ -145,7 +151,7 @@ I want to install WhatsApp MCP on my own server and I need you to guide me from
 beginning to end. I am not a technical person: I don't know Docker, I don't know
 the command line, and I have never rented a server.
 
-The project is this one: https://github.com/BrOrlandi/whatsapp-mcp
+The project is this one: https://github.com/BrOrlandi/whatsapp-mcp-server
 Read its README and docs/installation.md before you start (and docs/aws.md
 if we go with AWS), and follow the recommendations there (machine size, operating system, ports) rather than
 inventing your own.
@@ -189,7 +195,7 @@ WHAT WE NEED TO DO, IN THIS ORDER
 4. RUN THE INSTALLER
    Give me exactly this command, and only this one:
 
-   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash
+   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash
 
    Warn me it takes a few minutes and that a lot of text scrolling by is normal.
    Tell me what to expect at the end: a link ending in /setup?token=...
@@ -254,7 +260,7 @@ The panel shows the running version and says when a newer one exists. To update,
 one command on the server:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
 ```
 
 It dumps the database before anything else and preserves your secrets, your

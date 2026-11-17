@@ -6,7 +6,7 @@ secrets, the hostname, the WhatsApp pairing and the indexed messages stay where
 they are.
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
 ```
 
 On a machine that already has the command, `sudo whatsapp-mcp update` does the
@@ -166,7 +166,7 @@ Steps:
 1. Connect over SSH and show the current state: `sudo whatsapp-mcp version` and
    `sudo whatsapp-mcp status`.
 2. Run the update:
-   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash
+   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
 3. If it succeeds, confirm with `sudo whatsapp-mcp version` and tell me which
    version it went from and to.
 4. If it fails, do not try to fix it yourself. Collect and bring me:

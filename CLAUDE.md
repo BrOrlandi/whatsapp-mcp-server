@@ -1,3 +1,12 @@
+## Deprecation
+
+This repository is `BrOrlandi/whatsapp-mcp-server` (renamed from `whatsapp-mcp` on 2026-11-17).
+The server version is being retired in favour of WhatsApp MCP Local, which will later take the
+`BrOrlandi/whatsapp-mcp` name; from then on that name is the other project. Keep every link,
+`update.sh`, the version check and the update command on `whatsapp-mcp-server`, and the image
+name fixed at `ghcr.io/brorlandi/whatsapp-mcp`. Only fixes ship from here; the migration guide
+is `docs/migrar-para-local.md` (`docs/migrating-to-local.md`).
+
 ## Git workflow
 
 <!-- claude-skill:commit default-branch-policy=direct -->

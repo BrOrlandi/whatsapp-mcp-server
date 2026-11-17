@@ -9,7 +9,7 @@ It is an unofficial build, not endorsed by Evolution Foundation.
 ## Why
 
 Evolution Go 0.7.2 drops its WhatsApp connection about every 50 minutes
-([issue #6](https://github.com/BrOrlandi/whatsapp-mcp/issues/6),
+([issue #6](https://github.com/BrOrlandi/whatsapp-mcp-server/issues/6),
 [evolution-go#211](https://github.com/evolution-foundation/evolution-go/issues/211),
 [evolution-go#185](https://github.com/evolution-foundation/evolution-go/issues/185)):
 

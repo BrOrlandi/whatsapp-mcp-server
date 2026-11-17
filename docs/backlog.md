@@ -11,7 +11,7 @@ gateway já mantém.
 
 ## 1. Transcrição de áudio
 
-Issue: https://github.com/BrOrlandi/whatsapp-mcp/issues/1
+Issue: https://github.com/BrOrlandi/whatsapp-mcp-server/issues/1
 
 Transcrever mensagens de voz sob demanda, expondo o texto às ferramentas de
 leitura e à busca textual.
@@ -30,7 +30,7 @@ leitura e à busca textual.
 
 ## 2. Agendamento de mensagens
 
-Issue: https://github.com/BrOrlandi/whatsapp-mcp/issues/2
+Issue: https://github.com/BrOrlandi/whatsapp-mcp-server/issues/2
 
 Programar o envio de uma mensagem para um horário futuro, incluindo recorrência.
 
@@ -46,7 +46,7 @@ Programar o envio de uma mensagem para um horário futuro, incluindo recorrênci
 
 ## 3. Monitoramento de palavras-chave
 
-Issue: https://github.com/BrOrlandi/whatsapp-mcp/issues/3
+Issue: https://github.com/BrOrlandi/whatsapp-mcp-server/issues/3
 
 Observar o fluxo de mensagens que já chega pelo RabbitMQ e alertar quando um
 termo configurado for mencionado em uma conversa ou grupo.
@@ -62,7 +62,7 @@ termo configurado for mencionado em uma conversa ou grupo.
 
 ## 4. Retenção de dados
 
-Issue: https://github.com/BrOrlandi/whatsapp-mcp/issues/4
+Issue: https://github.com/BrOrlandi/whatsapp-mcp-server/issues/4
 
 O banco cresce sem limite no MVP. A limpeza fica para quando houver volume real
 para dimensionar o teto.

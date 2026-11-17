@@ -12,8 +12,34 @@ before it starts.
 To update:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
 ```
+
+## 1.3.0-beta.3
+
+The server version is being retired in favour of
+[WhatsApp MCP Local](https://github.com/BrOrlandi/whatsapp-mcp-local), which also
+runs on a headless Linux server. This version keeps working and changes nothing
+in the tools or the data; it only prepares instances for the repository's new
+name. Migrating is a recommendation:
+[how to migrate](docs/migrating-to-local.md) ([em português](docs/migrar-para-local.md)).
+
+### Changed
+
+- **The repository is now `BrOrlandi/whatsapp-mcp-server`.** The old name will
+  later go to WhatsApp MCP Local. `update.sh` moves an installation that still
+  points at the old name to the new one before it looks for releases, and the
+  version check, the update command and every link use the new name. Update
+  with the new address:
+
+  ```sh
+  curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
+  ```
+
+- **The panel says the server version is being retired**, on every page, with
+  a link to the migration guide.
+- The image keeps its name, `ghcr.io/brorlandi/whatsapp-mcp`, whatever the
+  repository is called.
 
 ## 1.3.0-beta.2
 
@@ -46,7 +72,7 @@ has not been released, so the stack now runs an unofficial build of 0.7.2 with
 it applied: `ghcr.io/brorlandi/whatsapp-mcp:evolution-0.7.2-patch.1`, built by
 this repository (see [`deploy/evolution`](deploy/evolution/README.md)). The
 stack goes back to the official image once Evolution publishes the fix
-([#6](https://github.com/BrOrlandi/whatsapp-mcp/issues/6)).
+([#6](https://github.com/BrOrlandi/whatsapp-mcp-server/issues/6)).
 
 ### Updating
 

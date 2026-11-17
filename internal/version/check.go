@@ -25,7 +25,7 @@ const (
 )
 
 // releasesURL is a variable only so a test can point it at its own server.
-var releasesURL = "https://api.github.com/repos/BrOrlandi/whatsapp-mcp/releases?per_page=10"
+var releasesURL = "https://api.github.com/repos/BrOrlandi/whatsapp-mcp-server/releases?per_page=10"
 
 // latest holds the newest release tag seen so far, or "" when no check has
 // succeeded yet. It is a package variable for the same reason Version is: the

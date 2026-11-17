@@ -1622,7 +1622,7 @@ func (a *webApp) selectedJSON(w http.ResponseWriter, r *http.Request) {
 // the same one-liner the documentation gives, so there is one command to get
 // wrong rather than two. It is a constant because it names a script in this
 // repository, not anything about this installation.
-const updateCommand = "curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash"
+const updateCommand = "curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash"
 
 // newRelease is the version to update to, or empty when there is nothing to
 // say — no check has succeeded, the check is off, this build is already

@@ -47,7 +47,7 @@ case "${1:-}" in
         if [ -x ./update.sh ]; then
             exec ./update.sh "$@"
         fi
-        curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | bash
+        curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | bash
         ;;
     url)     cat hostname 2>/dev/null | sed 's|^|https://|' ;;
     version)

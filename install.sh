@@ -2,7 +2,7 @@
 #
 # WhatsApp MCP — one-command install on a clean Linux VM.
 #
-#   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash
+#   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash
 #
 # Installs Docker if it is missing, clones this project into /opt/whatsapp-mcp,
 # generates every secret, derives a hostname from the machine's own public IPv4
@@ -17,7 +17,7 @@ set -euo pipefail
 # success. Every such command below gets </dev/null; closing stdin globally is
 # not an option here, because that is where bash is reading this from.
 
-REPO_URL="${REPO_URL:-https://github.com/BrOrlandi/whatsapp-mcp.git}"
+REPO_URL="${REPO_URL:-https://github.com/BrOrlandi/whatsapp-mcp-server.git}"
 REPO_REF="${REPO_REF:-main}"
 INSTALL_DIR="${INSTALL_DIR:-/opt/whatsapp-mcp}"
 CLI_PATH="/usr/local/bin/whatsapp-mcp"
@@ -426,7 +426,7 @@ printf '  whatsapp-mcp version\n'
 printf '  whatsapp-mcp update\n\n'
 printf 'The panel tells you when a newer version exists. To update, on this\n'
 printf 'machine or by pasting the same command anywhere:\n\n'
-printf '  curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash\n\n'
+printf '  curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash\n\n'
 printf 'Ports: this stack needs 80 and 443 open, and nothing else. Keep your\n'
 printf 'provider firewall (DigitalOcean Cloud Firewall, AWS security group, and\n'
 printf 'so on) to 80, 443 and whichever port you reach SSH on. Never publish the\n'

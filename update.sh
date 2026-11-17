@@ -2,7 +2,7 @@
 #
 # WhatsApp MCP — update an installation made by install.sh.
 #
-#   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash
+#   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
 #
 # Moves an existing installation to the newest published release. Secrets, the
 # hostname, the WhatsApp pairing and every indexed message are left alone: only
@@ -23,7 +23,7 @@ INSTALL_DIR="${INSTALL_DIR:-/opt/whatsapp-mcp}"
 CLI_PATH="/usr/local/bin/whatsapp-mcp"
 COMPOSE_FILES=(-f docker-compose.yml -f deploy/docker-compose.public.yml)
 BACKUP_KEEP="${BACKUP_KEEP:-5}"
-REPOSITORY_URL="https://github.com/BrOrlandi/whatsapp-mcp"
+REPOSITORY_URL="https://github.com/BrOrlandi/whatsapp-mcp-server"
 
 step()  { printf '\n\033[1;36m==>\033[0m %s\n' "$*"; }
 info()  { printf '    %s\n' "$*"; }
@@ -84,6 +84,17 @@ step "Finding the release to move to"
 # Tags are what this fetches for: a --depth 1 clone has none, and without them
 # there is no release to name. --force lets a moved tag be corrected rather
 # than failing the whole update.
+#
+# The repository was renamed from whatsapp-mcp to whatsapp-mcp-server, and the
+# old name will be given to WhatsApp MCP Local. A checkout still pointing at the
+# old name would then fetch the other project, so it is moved to the new name
+# first. A fork or any other remote is left alone.
+case "$(git remote get-url origin 2>/dev/null)" in
+    https://github.com/BrOrlandi/whatsapp-mcp|https://github.com/BrOrlandi/whatsapp-mcp.git|git@github.com:BrOrlandi/whatsapp-mcp.git)
+        git remote set-url origin "${REPOSITORY_URL}.git"
+        info "repository moved to ${REPOSITORY_URL}"
+        ;;
+esac
 git fetch --quiet --tags --force origin
 # A checkout sitting on a release tag is detached, which is every installation
 # that has been updated once. main is the right answer for it: that is the

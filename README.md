@@ -21,6 +21,12 @@
 
 ---
 
+> [!WARNING]
+> **A versão servidor vai ser descontinuada.** Ela continua funcionando, mas não
+> vai receber novidades. O [WhatsApp MCP Local](https://github.com/BrOrlandi/whatsapp-mcp-local)
+> também roda num servidor Linux e é a versão que segue sendo mantida. Veja
+> [como migrar](docs/migrar-para-local.md).
+
 > **Para quase todo mundo, o
 > [WhatsApp MCP Local](https://github.com/BrOrlandi/whatsapp-mcp-local) é o
 > caminho mais simples.** É um app para macOS, Windows e Linux que roda no seu
@@ -93,7 +99,7 @@ O provedor vai te dar um endereço de IP e um jeito de abrir um terminal na
 máquina (quase todos têm um botão de console no próprio site). Cole lá:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash
 ```
 
 Ele faz o resto sozinho: instala o Docker, gera todas as senhas, cria um
@@ -139,7 +145,7 @@ Quero instalar o WhatsApp MCP no meu próprio servidor e preciso que você me
 guie do começo ao fim. Eu não sou uma pessoa técnica: não sei Docker, não sei
 linha de comando e nunca aluguei um servidor.
 
-O projeto é este: https://github.com/BrOrlandi/whatsapp-mcp
+O projeto é este: https://github.com/BrOrlandi/whatsapp-mcp-server
 Leia o README dele e o docs/instalacao.md antes de começar (e o
 docs/aws.pt-BR.md, se formos usar a AWS), e siga as recomendações de lá (tamanho de máquina, sistema operacional, portas) em vez
 de inventar as suas.
@@ -183,7 +189,7 @@ O QUE PRECISAMOS FAZER, NESTA ORDEM
 4. RODAR O INSTALADOR
    Me passe exatamente este comando, e só ele:
 
-   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash
+   curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash
 
    Me avise que vai demorar alguns minutos e que é normal aparecer muito texto.
    Me diga o que esperar no final: um link terminando em /setup?token=...
@@ -248,7 +254,7 @@ O painel mostra a versão que está rodando e avisa quando sai uma nova. Para
 atualizar, um comando no servidor:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/update.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/update.sh | sudo bash
 ```
 
 Ele faz backup do banco antes de qualquer coisa e preserva os seus segredos, o

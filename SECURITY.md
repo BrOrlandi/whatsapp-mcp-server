@@ -6,7 +6,7 @@ messages it has ingested. Treat an instance of it as you would treat the phone.
 ## Reporting a vulnerability
 
 Report privately through [GitHub's security advisory
-form](https://github.com/BrOrlandi/whatsapp-mcp/security/advisories/new). Please
+form](https://github.com/BrOrlandi/whatsapp-mcp-server/security/advisories/new). Please
 do not open a public issue for anything that affects a running installation.
 
 Include what you did, what happened, and what you expected. A proof of concept

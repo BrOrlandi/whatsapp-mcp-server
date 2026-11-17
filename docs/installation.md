@@ -68,7 +68,7 @@ disabled, and [self-hosting.md](self-hosting.md) explains why.
 ## 2. The installer
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh | sudo bash
 ```
 
 What it does, in order:
@@ -103,7 +103,7 @@ Pass them before `bash` to decide at install time, without editing a file
 afterwards:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp/main/install.sh \
+curl -fsSL https://raw.githubusercontent.com/BrOrlandi/whatsapp-mcp-server/main/install.sh \
   | sudo EVOLUTION_LICENSE_AUTO=false bash
 ```
 
@@ -187,7 +187,7 @@ If you would rather bring your own host, TLS or orchestration, the stack is one
 Compose file:
 
 ```sh
-git clone https://github.com/BrOrlandi/whatsapp-mcp.git
+git clone https://github.com/BrOrlandi/whatsapp-mcp-server.git
 cd whatsapp-mcp
 cp .env.example .env    # replace every change-me-long-random-value
 docker compose up --build -d
@@ -205,7 +205,7 @@ The gateway is published on every push to `main` and on every version tag:
 |---|---|
 | Image | `ghcr.io/brorlandi/whatsapp-mcp` — `linux/amd64` and `linux/arm64` |
 | Tags | `edge` follows `main`; `0.2.0-beta.1` and `latest` on a release; `sha-<commit>` always. `latest` follows the newest release, beta included — it is the version to run. |
-| Binaries | `whatsapp-mcp_<version>_linux_{amd64,arm64}.tar.gz` on each [release](https://github.com/BrOrlandi/whatsapp-mcp/releases), with `checksums.txt` |
+| Binaries | `whatsapp-mcp_<version>_linux_{amd64,arm64}.tar.gz` on each [release](https://github.com/BrOrlandi/whatsapp-mcp-server/releases), with `checksums.txt` |
 
 Pin a version with `WHATSAPP_MCP_TAG` in `.env`:
 
